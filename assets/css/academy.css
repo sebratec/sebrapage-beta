@@ -1,0 +1,13 @@
+.SearchCourses {
+    padding: 30px 0px;
+}
+
+.SearchBarTitle {
+    float: left;
+    width: 100%;
+    height: auto;
+    color: #f1670b;
+    font-size: 34px;
+    font-weight: 600;
+    text-align: center;
+}
