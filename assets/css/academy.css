@@ -1,4 +1,9 @@
-.SearchCourses {
+.SearchCourses, .CourseCategories {
+    float: left;
+    width: 100%;
+    height: auto;
+    clear: both;
+    overflow: visible;
     padding: 30px 0px;
 }
 
@@ -10,4 +15,93 @@
     font-size: 34px;
     font-weight: 600;
     text-align: center;
+}
+
+.SearchWrapper {
+    float: left;
+    position: relative;
+    width: 50%;
+    margin: 15px 25%;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.17);
+}
+
+#SearchBar {
+    float: left;
+    width: calc(100% - 80px);
+    height: auto;
+    margin: 0px;
+    padding: 15px;
+    border: none;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.SearchTrigger {
+    float: left;
+    width: 80px;
+    height: 49px;
+    border: none;
+    border-radius: 0px;
+    background: #f1670b;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.SearchTrigger > img {
+    width: 28px;
+    height: 28px;
+}
+
+.SearchWrapper > .results {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-height: 271px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-top: 1px solid #CCC;
+    padding: 0px;
+    top: 49px;
+    left: 0px;
+    background: #FFF;
+    z-index: 2;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.12);
+}
+
+.results > .result {
+    float: left;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    transition: background 0.15s ease-in-out;
+}
+
+.results > .result:hover {
+    background: #F8F8F8;
+}
+
+.result > .CourseIMG {
+    float: left;
+    width: 96px;
+    height: 64px;
+    border-radius: 5px;
+    background: #f1670b;
+}
+
+.result > .title {
+    float: left;
+    width: calc(100% - 120px);
+    margin-left: 15px;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.result > .description {
+    float: left;
+    width: calc(100% - 120px);
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
 }

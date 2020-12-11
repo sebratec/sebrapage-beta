@@ -62,7 +62,7 @@
 
 .Lang > #LangTrigger {
 	position: absolute;
-	right: 8px;
+	right: 15px;
 	top: 17px;
 	padding: 0px 7px;
 	border: none;
@@ -272,7 +272,13 @@
 	background-size: contain;
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (min-width: 760px) {
+	.nav-primary {
+		margin-right: 30px;
+	}
+}
+
+@media screen and (max-width: 992px) {
 	.the-logo {
 		position: absolute;
 		left: calc(50% - 50px);
