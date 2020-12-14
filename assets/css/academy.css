@@ -1,10 +1,10 @@
-.SearchCourses, .CourseCategories {
+section {
     float: left;
     width: 100%;
     height: auto;
     clear: both;
-    overflow: visible;
-    padding: 30px 0px;
+    overflow: visible !important;
+    padding: 30px 0px !important;
 }
 
 .SearchBarTitle {
@@ -26,9 +26,11 @@
 }
 
 #SearchBar {
+    position: relative;
     float: left;
     width: calc(100% - 80px);
     height: auto;
+    z-index: 2;
     margin: 0px;
     padding: 15px;
     border: none;
@@ -36,10 +38,12 @@
 }
 
 .SearchTrigger {
+    position: relative;
     float: left;
     width: 80px;
     height: 49px;
     border: none;
+    z-index: 2;
     border-radius: 0px;
     background: #f1670b;
     border-radius: 0px 4px 4px 0px;
@@ -51,6 +55,7 @@
 }
 
 .SearchWrapper > .results {
+    display: none;
     position: absolute;
     width: 100%;
     height: auto;
@@ -62,9 +67,13 @@
     top: 49px;
     left: 0px;
     background: #FFF;
-    z-index: 2;
+    z-index: 1;
     border-radius: 0px 0px 5px 5px;
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.12);
+}
+
+#SearchBar:focus ~ .results {
+    display: block;
 }
 
 .results > .result {
@@ -104,4 +113,177 @@
     margin-top: 10px;
     margin-bottom: 0px;
     font-size: 14px;
+}
+
+.CourseCategories > .title, 
+.experience > .title {
+    float: left;
+    clear: both;
+    width: 1000px;
+    font-size: 28px;
+    margin: 0px calc(50% - 500px);
+    color: #f1670b;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.FlexWrapper {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    float: left;
+    clear: both;
+    width: 1000px;
+    margin: 20px calc(50% - 500px);
+    height: auto;
+    margin-top: 30px !important;
+}
+
+.FlexWrapper > .card {
+    width: 320px;
+    flex-basis: 320px;
+    margin-bottom: 24px;
+    padding: 20px;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.12);
+    transition: all 0.13s ease-in-out;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.FlexWrapper > .card:hover {
+    box-shadow: 0 0 10px 2px rgba(241,103,11,0.4);
+}
+
+.FlexWrapper > .card > .CardImage {
+    width: calc(100% + 40px);
+    height: 180px;
+    margin: -20px;
+    margin-bottom: 0px;
+    background: rgb(241, 103, 11);
+}
+
+.FlexWrapper > .card > .CardTitle {
+    margin-top: 25px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.FlexWrapper > .card > .CardDescription {
+    min-height: 100px;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}
+
+.experience {
+    float: left;
+    clear: both;
+    width: 1000px;
+    height: auto;
+    margin: 0px calc(50% - 500px);
+}
+
+.experience > .FlexWrapper > .card,
+.experience > .FlexWrapper > .card:hover {
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.12);
+}
+
+.experience > .description {
+    float: left;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.experience > .FlexWrapper > .card > .CardTitle,
+.experience > .FlexWrapper > .card > .CardDescription {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.about-academy {
+    float: left;
+    width: 1000px;
+    height: auto;
+    margin-top: 30px;
+    margin-left: calc(50% - 500px);
+}
+
+.about-academy > .left {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 240px;
+}
+
+.about-academy > .left > img {
+    position: absolute;
+    float: left;
+    width: auto;
+    max-width: none;
+    height: 348px;
+    left: -155px;
+    top: -100px;
+    z-index: 1;
+}
+
+.about-academy > .left > .video {
+    position: absolute;
+    left: 28px;
+    top: -48px;
+    z-index: 2;
+}
+
+.about-academy > .right {
+    float: right;
+    width: 50%;
+}
+
+.about-academy > .right > .title {
+    float: left;
+    clear: both;
+    width: 100%;
+    font-size: 32px;
+    color: #f1670b;
+    font-weight: 600;
+}
+
+.about-academy > .right > .description {
+    font-size: 14px;
+    color: #888;
+}
+
+/* -------------- */
+/* RESPONSIVIDADE */
+/* -------------- */
+@media screen and (max-width: 1060px) {
+    .SearchWrapper {
+        width: 620px;
+        margin: 15px calc(50% - 310px);
+    }
+
+    .FlexWrapper, 
+    .CourseCategories > .title {
+        width: 760px;
+        margin: 20px calc(50% - 380px);
+    }
+
+    .FlexWrapper > .card {
+        width: 240px;
+        flex-basis: 240px;
+    }
+}
+
+@media screen and (max-width: 819px) {
+    .FlexWrapper, 
+    .CourseCategories > .title {
+        width: 640px;
+        margin: 20px calc(50% - 320px);
+    }
+
+    .FlexWrapper > .card {
+        width: 300px;
+        flex-basis: 300px;
+    }
 }
