@@ -32,7 +32,22 @@ function myFn() {
 //This sets slider time to 7sec. You can increase/decrease as you wish
 myTimer = setInterval(myFn, 7000);
 
+$(".results").hide();
+
 $(document).ready(function(){
+	$("html").click(function () {
+		if ($(".results").css("display", "block")) {
+			$(".results").hide();
+		  } else {
+			  //DO NOTHING
+		  }
+	});
+	
+	//SHOWS THE RESULTS WHENEVER THE SEARCHBAR AREA IS CLICKED
+	$(".SearchBar").click(function () {
+		$(".results").show();
+	});
+
 	//Primeiro um RESET
 	$(images).css({left: '0vw', opacity: 1});
 
@@ -63,5 +78,5 @@ $(document).ready(function(){
     	$(".s3").addClass("active");
 		$(".image1, .image2").animate({left: '-110vw'});
 		$(".image3").css("left", "0px");
- });
+	 });
 });

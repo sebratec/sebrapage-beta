@@ -1,0 +1,125 @@
+section {
+    float: left;
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    clear: both;
+    overflow: visible !important;
+    padding: 30px 0px !important;
+}
+
+.summary {
+    position: relative;
+    width: 1000px;
+    height: auto;
+    min-height: 64vh;
+    margin: 50px calc(50% - 500px);
+    background: #333;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.17);
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: rgba(0, 0, 0, 0.33);
+}
+
+.overlay > .CourseName {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    font-size: 38px;
+    font-weight: 700;
+    text-align: center;
+    color: #FFF;
+}
+
+.overlay > .TeacherName {
+    float: left;
+    width: 100%;
+    height: auto;
+    margin: 12px 0px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    opacity: 0.67;
+    color: #FFF;
+}
+
+.rating {
+    float: left;
+    width: 130px;
+    height: auto;
+    margin-left: calc(50% - 65px);
+}
+
+.rating > svg {
+    float: left;
+    width: 24px;
+    height: 24px;
+	margin-right: 2px;
+	fill: #AAA;
+}
+
+.rt1 > svg:nth-child(1) {
+	fill: #FFF;
+}
+
+.rt2 > svg:nth-child(-n+2) {
+	fill: #FFF;
+}
+
+.rt3 > svg:nth-child(-n+3) {
+	fill: #FFF;
+}
+
+.rt4 > svg:nth-child(-n+4) {
+	fill: #FFF;
+}
+
+.rt5 > svg {
+	fill: #FFF;
+}
+
+.overlay > .UnderWrap {
+    position: absolute;
+    width: 100%;
+    height: 110px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.overlay > .UnderWrap > a > .summary-button {
+    float: left;
+    width: 110px;
+    height: 44px;
+    margin-left: 10px;
+    background: none;
+    border: 2px solid #FFF;
+    border-radius: 100px;
+    color: #FFF;
+}
+
+.overlay > .UnderWrap > a > .cta {
+    float: left;
+    width: 110px;
+    height: 44px;
+    margin-left: calc(50% - 115px);
+    background: #FFF;
+    border: 2px solid #FFF;
+    border-radius: 100px;
+    color: #f1670b;
+}
+
+.overlay > .UnderWrap > .StartingDate {
+    float: left;
+    width: 100%;
+    font-size: 16px;
+    color: #FFF;
+    text-align: center;
+    margin: 15px 0px;
+}
