@@ -14,8 +14,15 @@ section {
     height: auto;
     min-height: 64vh;
     margin: 50px calc(50% - 500px);
-    background: #333;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.17);
+}
+
+.bg1 {
+    background-image: url(../img/video/coding-1.gif);
 }
 
 .overlay {
@@ -32,6 +39,7 @@ section {
     width: 100%;
     height: auto;
     margin-top: 25px;
+    margin-bottom: 0px;
     font-size: 38px;
     font-weight: 700;
     text-align: center;
@@ -122,4 +130,250 @@ section {
     color: #FFF;
     text-align: center;
     margin: 15px 0px;
+}
+
+.overall {
+    display: flex;
+    justify-content: center;
+    width: 1000px;
+    height: 200px;
+    margin-left: calc(50% - 500px);
+}
+
+.overall > div {
+    width: 250px;
+    height: 100%;
+    margin-right: 30px;
+    border-right: 1px solid #BBB;
+}
+
+.overall > div:nth-child(3) {
+    border-right: none;
+    margin-right: 0px;
+}
+
+.overall > div > .row1 {
+    float: left;
+    width: 100%;
+    font-size: 14px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+
+.overall > div > .row2 {
+    float: left;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.about {
+    float: left;
+    width: 1000px;
+    margin-left: calc(50% - 500px);
+}
+
+.about > .title {
+    float: left;
+    clear: both;
+    width: 1000px;
+    font-size: 28px;
+    margin: 0px calc(50% - 500px);
+    color: #f1670b;
+    font-size: 34px;
+    font-weight: 600;
+}
+
+.about > .description {
+    float: left;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.feedbacks {
+    float: left;
+    width: 1000px;
+    height: auto;
+    margin-top: 30px;
+    margin-left: calc(50% - 500px);
+}
+
+.feedbacks > .left {
+    position: relative;
+    float: left;
+    width: 50%;
+    min-height: 240px;
+}
+
+.feedbacks > .right {
+    float: right;
+    width: 50%;
+}
+
+.feedbacks > .left > .title {
+    float: left;
+    clear: both;
+    width: 100%;
+    font-size: 32px;
+    color: #f1670b;
+    font-weight: 600;
+}
+
+.feedbacks > .left > .description {
+    font-size: 14px;
+    color: #888;
+}
+
+.feedbacks {
+    margin-top: 50px;
+}
+
+.feedbacks > .right {
+    margin-top: -50px;
+}
+
+.CardSlider {
+	float: left;
+	width: 100%;
+	height: 280px;
+	background: #FFF;
+	position: relative;
+	overflow: hidden;
+}
+
+.navigation {
+	position: absolute;
+	width: 32px;
+	height: 140px;
+    top: 0px;
+    opacity: 0.4;
+	background: #FFF;
+	border-radius: 0px;
+	border: none;
+	outline: none;
+    cursor: pointer;
+    transition: all 0.13s ease-in-out;
+}
+
+.navigation:hover {
+    opacity: 1;
+	background: #EEE;
+}
+
+.prev {
+	top: calc(50% - 70px);
+	left: 0px;
+}
+
+.next {
+	top: calc(50% - 70px);
+	right: 0px;
+}
+
+.CardSlider > .card {
+	position: absolute;
+	width: calc(100% - 72px);
+	height: 240px;
+	top: 20px;
+	left: 0px;
+	right: 0px;
+    margin: auto;
+    background: #FFF;
+	border-radius: 4px;
+}
+
+.CardSlider > .first {
+    z-index: 3;
+}
+
+.CardSlider > .second {
+    z-index: 2;
+}
+
+.CardSlider > .third {
+    z-index: 1;
+}
+
+.CardSlider > .active {
+    left: 0px !important;
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.12) !important;
+}
+
+.CardSlider > .card > .picture {
+	float: left;
+	width: 80px;
+	height: 80px;
+	border-radius: 100%;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+
+.CardSlider > .card > .FeedbackName {
+	float: left;
+	width: calc(100% - 120px);
+	height: auto;
+	clear: right;
+	margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 0px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.CardSlider > .card > .FeedbackPosition {
+	float: left;
+	width: calc(100% - 120px);
+	height: auto;
+	clear: right;
+	margin-left: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+	font-size: 14px;
+}
+
+.CardSlider > .card > .rating {
+	float: left;
+	width: calc(100% - 120px);
+	height: auto;
+	clear: right;
+	margin-left: 18px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+	font-size: 14px;
+}
+
+.CardSlider > .card > .rating > svg {
+	float: left;
+	margin-right: -2px;
+	fill: #AAA;
+}
+
+.CardSlider > .card > .rt1 > svg:nth-child(1) {
+	fill: #FA4616;
+}
+
+.CardSlider > .card > .rt2 > svg:nth-child(-n+2) {
+	fill: #FA4616;
+}
+
+.CardSlider > .card > .rt3 > svg:nth-child(-n+3) {
+	fill: #FA4616;
+}
+
+.CardSlider > .card > .rt4 > svg:nth-child(-n+4) {
+	fill: #FA4616;
+}
+
+.CardSlider > .card > .rt5 > svg {
+	fill: #FA4616;
+}
+
+.CardSlider > .card > .FeedbackText {
+	float: left;
+	width: calc(100% - 50px);
+	height: auto;
+	margin-left: 15px;
+	margin-top: 15px;
+	font-size: 14px;
 }
