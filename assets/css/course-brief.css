@@ -168,13 +168,15 @@ section {
     font-weight: 600;
 }
 
-.about {
+.about, 
+.other-materials {
     float: left;
     width: 1000px;
     margin-left: calc(50% - 500px);
 }
 
-.about > .title {
+.about > .title,
+.other-materials > .title {
     float: left;
     clear: both;
     width: 1000px;

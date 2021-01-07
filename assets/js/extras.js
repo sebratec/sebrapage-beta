@@ -34,19 +34,19 @@ myTimer = setInterval(myFn, 7000);
 
 $(".results").hide();
 
-$(document).ready(function(){
-	$("html").click(function () {
-		if ($(".results").css("display", "block")) {
-			$(".results").hide();
-		  } else {
-			  //DO NOTHING
-		  }
-	});
-	
+$(document).ready(function(){	
 	//SHOWS THE RESULTS WHENEVER THE SEARCHBAR AREA IS CLICKED
-	$(".SearchBar").click(function () {
+	$(".SearchBar, .result").click(function () {
 		$(".results").show();
 	});
+
+	$(".SearchBar, .results").focusout(function () {
+		$(".results").hide();
+	});
+
+	$(".main-action").click(function() {
+		document.querySelector('.CourseCategories').scrollIntoView({behavior: 'smooth' });
+	})
 
 	//Primeiro um RESET
 	$(images).css({left: '0vw', opacity: 1});
