@@ -479,6 +479,12 @@ section {
         width: 240px;
         flex-basis: 240px;
     }
+
+    .experience > .title, 
+	.experience > .description {
+		width: 760px;
+		margin-left: calc(50% - 380px);
+	}
 }
 
 @media screen and (max-width: 819px) {
@@ -491,5 +497,15 @@ section {
     .FlexWrapper > .card {
         width: 300px;
         flex-basis: 300px;
+    }
+
+    .experience > .title, 
+	.experience > .description {
+		width: 640px;
+		margin-left: calc(50% - 320px);
+    }
+    
+    .experience > .FlexWrapper > .card {
+        flex-basis: 100%;
     }
 }
