@@ -147,8 +147,10 @@ section {
 }
 
 .FlexWrapper > .card {
+    position: relative;
     width: 320px;
     flex-basis: 320px;
+    max-height: 430px;
     margin-bottom: 24px;
     padding: 20px;
     box-shadow: 0 0 10px 2px rgba(0,0,0,0.12);
@@ -159,6 +161,21 @@ section {
 
 .FlexWrapper > .card:hover {
     box-shadow: 0 0 10px 2px rgba(241,103,11,0.4);
+}
+
+.CourseCategories .FlexWrapper > .card {
+    height: 430px;
+}
+
+.FlexWrapper > .card > .beta {
+    position: absolute;
+    left: -21px;
+    top: 5px;
+    padding: 4px 24px;
+    background:#FFF;
+    color: rgb(241, 103, 11);
+    box-shadow: 0 0 10px 2px rgba(0,0,0,0.06);
+    transform: rotate(-45deg);
 }
 
 .FlexWrapper > .card > .CardImage {
@@ -421,13 +438,25 @@ section {
 }
 
 .call-to-action-final {
+    position: relative;
     float: left;
     width: 100%;
-    height: auto;
-    min-height: 200px;
+    height: 250px;
     padding: 50px 0px !important;
-    background: rgb(241, 103, 11);
+    background-color: rgb(241, 103, 11);
+    background-image: url(../img/video/gif-cta-academy.gif);
+    background-size: cover;
+    background-position: center;
 }
+
+/* .call-to-action-final:before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    
+} */
 
 .call-to-action-final > h2 {
     float: left;
