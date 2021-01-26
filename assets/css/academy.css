@@ -259,6 +259,8 @@ section {
     position: absolute;
     left: 28px;
     top: -43px;
+    width: 390px;
+    height: 230px;
     z-index: 2;
 }
 
@@ -444,21 +446,29 @@ section {
     height: 250px;
     padding: 50px 0px !important;
     background-color: rgb(241, 103, 11);
-    background-image: url(../img/video/gif-cta-academy.gif);
-    background-size: cover;
-    background-position: center;
 }
 
-/* .call-to-action-final:before {
+.call-to-action-final > .GIFBackground {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0px;
     left: 0px;
-    
-} */
+    z-index: 1;
+    opacity: 0.2;
+    background-image: url(../img/video/gif-cta-academy.gif);
+}
 
-.call-to-action-final > h2 {
+.call-to-action-final > .CTAData {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: 0px;
+    z-index: 2;
+}
+
+.call-to-action-final > .CTAData > h2 {
     float: left;
     width: 100%;
     height: auto;
@@ -467,7 +477,7 @@ section {
     text-align: center;
 }
 
-.call-to-action-final > a > button {
+.call-to-action-final > .CTAData > a > button {
     float: left;
     width: 170px;
     padding: 15px 25px;
@@ -479,13 +489,13 @@ section {
     border: 2px solid #FFF;
 }
 
-.call-to-action-final > a > .main-action {
+.call-to-action-final > .CTAData > a > .main-action {
     background: #FFF;
     color: rgb(241, 103, 11);
     font-weight: 600;
 }
 
-.call-to-action-final > a > .other-action {
+.call-to-action-final > .CTAData > a > .other-action {
     margin-left: 30px;
 }
 
@@ -509,32 +519,116 @@ section {
         flex-basis: 240px;
     }
 
+    .CourseCategories .FlexWrapper > .card {
+        height: 390px;
+    }
+
+    .FlexWrapper > .card > .CardTitle {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
+    .FlexWrapper > .card > .CardDescription {
+        font-size: 12px;
+    }
+
     .experience > .title, 
 	.experience > .description {
 		width: 760px;
 		margin-left: calc(50% - 380px);
-	}
+    }
+    
+    .about-academy > .left, .about-academy > .right, 
+    .feedbacks > .left, .feedbacks > .right {
+        float: left;
+        width: 760px;
+        margin-left: calc(50% - 380px);
+    }
+
+    .about-academy > .left {
+        height: 420px;
+        margin: 20px 0px;
+    }
+
+    .about-academy > .left > img {
+        display: none;
+    }
+
+    .about-academy > .left > .video {
+        width: 100%;
+        height: 420px;
+        left: 0px;
+    }
 }
 
 @media screen and (max-width: 819px) {
-    .FlexWrapper, 
-    .CourseCategories > .title {
-        width: 640px;
-        margin: 20px calc(50% - 320px);
+    .CourseCategories, .experience, .about-academy, .feedbacks {
+        width: 90%;
+        margin-left: 5%;
     }
 
     .FlexWrapper > .card {
-        width: 300px;
-        flex-basis: 300px;
+        flex-basis: 32%;
+    }
+
+    .FlexWrapper, .CourseCategories > .title {
+        width: 100%;
+        margin: 20px 0%;
+    }
+
+    .CourseCategories > .FlexWrapper > .card {
+        flex-basis: 100%;
+        flex-direction: column;
     }
 
     .experience > .title, 
-	.experience > .description {
-		width: 640px;
-		margin-left: calc(50% - 320px);
+    .experience > .description,
+    .about-academy > .right > .title, 
+    .feedbacks > .left > .title,
+    .about-academy > .right > .description, 
+    .feedbacks > .left > .description {
+        width: 100%;
+        float: left;
+		margin: 0px;
+    }
+
+    .about-academy > .left, .about-academy > .right, 
+    .feedbacks > .left, .feedbacks > .right {
+        width: 100%;
+        min-height: 0px;
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .slider {
+        height: calc(100vh - 68px);
+        min-height: 500px;
     }
     
-    .experience > .FlexWrapper > .card {
+    .FlexWrapper > .card {
         flex-basis: 100%;
     }
+
+    .call-to-action-final {
+        height: 320px;
+    }
+
+    .call-to-action-final > .CTAData > h2 {
+        font-size: 24px;
+    }
+
+    .call-to-action-final > .CTAData > a > button {
+        float: left;
+        width: 70%;
+        margin: 20px 15% !important;
+    }
+
+    .call-to-action-final > .CTAData > a > .other-action {
+        margin-top: 0px !important;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    
 }
