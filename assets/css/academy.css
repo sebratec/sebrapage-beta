@@ -183,7 +183,22 @@ section {
     height: 180px;
     margin: -20px;
     margin-bottom: 0px;
-    background: rgb(241, 103, 11);
+    background-color: rgb(241, 103, 11);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cpvs {
+	background-image: url(../img/photos/compvisio5.jpg);
+}
+
+.dplr {
+	background-image: url(../img/photos/comewithme.jpg);
+}
+
+.dploy {
+	background-image: url(../img/photos/deploy.jpg);
 }
 
 .FlexWrapper > .card > .CardTitle {
