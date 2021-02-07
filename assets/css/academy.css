@@ -560,6 +560,13 @@ section {
 /* RESPONSIVIDADE */
 /* -------------- */
 @media screen and (max-width: 1060px) {
+    .image1 > .wrapper {
+        float: left;
+        width: 90%;
+        height: auto;
+        margin-left: 5%;
+    }
+
     .SearchWrapper {
         width: 620px;
         margin: 15px calc(50% - 310px);
@@ -658,8 +665,17 @@ section {
 }
 
 @media screen and (max-width: 640px) {
+    .image1 > .wrapper > h1 {
+        font-size: 32px;
+        margin-top: 50px;
+    }
+
+    .image1 > .wrapper > .description {
+        font-size: 16px;
+    }
+
     .slider {
-        height: calc(100vh - 68px);
+        height: calc(100vh - 168px);
         min-height: 500px;
     }
     
@@ -686,6 +702,18 @@ section {
     }
 }
 
-@media screen and (max-width: 425px) {
-    
+@media screen and (max-width: 320px) {
+    .navigation, .navigation:hover {
+        background: none;
+        opacity: 1;
+        z-index: 10;
+    }
+
+    .CardSlider > .card {
+        width: 96.5%;
+    }
+
+    .CardSlider > .card > .FeedbackText {
+        margin-left: 28px;
+    }
 }
