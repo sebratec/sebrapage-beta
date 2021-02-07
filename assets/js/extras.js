@@ -44,7 +44,7 @@ $(document).ready(function(){
 		$(".results").hide();
 	});
 
-	$(".main-action").click(function() {
+	$(".main-action, .scroll-to-courses").click(function() {
 		document.querySelector('.CourseCategories').scrollIntoView({behavior: 'smooth' });
 	})
 
