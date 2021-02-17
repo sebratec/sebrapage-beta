@@ -21,15 +21,15 @@ section {
 }
 
 .bg1 {
-    background-image: url(../img/video/coding-1.gif);
+    background-image: url(../img/photos/comewithme.jpg);
 }
 
 .bg2 {
-    background-image: url(../img/video/computer-vision.gif);
+    background-image: url(../img/photos/compvisio5.jpg);
 }
 
 .bg3 {
-    background-image: url(../img/video/deploy.gif);
+    background-image: url(../img/photos/coding-1.jpg);
 }
 
 .overlay {
@@ -121,9 +121,9 @@ section {
 
 .overlay > .UnderWrap > a > .cta {
     float: left;
-    width: 110px;
+    width: 140px;
     height: 44px;
-    margin-left: calc(50% - 115px);
+    margin-left: calc(50% - 130px);
     background: #FFF;
     border: 2px solid #FFF;
     border-radius: 100px;
@@ -395,7 +395,7 @@ section {
 
 .call-to-action-final > .wrapper > a > button {
     float: right;
-    width: 110px;
+    width: 140px;
     height: 40px;
     margin-top: 21px;
     background: #FFF;
